@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* Additional styles specific to the register page */
+        body {
+            background-color: #2C3E50; /* Dark blue background color */
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-container {
+            background-color: #fff; /* White background color */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            color: #333; /* Dark text color */
+        }
+
+        .register-form input {
+            width: calc(100% - 20px); /* Adjusting for padding */
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px;
+            outline: none; /* Remove outline on focus */
+        }
+
+        #UserType{
+            width: calc(100% - 20px);
+            padding: 10px;
+        }
+        
+
+        .register-form button {
+            width: calc(100% - 20px); /* Adjusting for padding */
+            padding: 10px;
+            background-color: #ff8000; /* Blue button background color */
+            color: #fff; /* White button text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .register-form button:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        .register-form a {
+            color: #555; /* Dark gray link color */
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .register-form a:hover {
+            text-decoration: underline;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Register</h2>
+        <form class="register-form" action="/register" method="POST">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+            <select id="userType" name="userType" required>
+                <option value="">Select User Type</option>
+                <option value="CT">Citizen</option>
+                <option value="PL">Police</option>
+            </select>
+            <br><br>
+            <button type="submit" name="registerButton">Register</button><br><br>
+            
+            <a href="#">Forgot Password?</a>
+        </form>
+    </div>     
+
+    <div class="overlay" id="overlay"></div>
+</body>
+</html>

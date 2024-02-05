@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="dashboard.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome, [Police Name]</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#report-incident">Report Incident</a></li>
+            <li><a href='#' onclick="showCaseStatusForm()">Check Case Status</a></li>
+            <li><a href="#" onclick="showPendingLicenses()">Approve Licenses</a></li>
+            <li><a href="profile-settings.html">Profile Settings</a></li>
+            <li><a href="chats.html" style="background-color: white;"><img src="messenger_1370907.png" alt="msg_icon" height="20px" width="20px"></li></a>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="licenseDetails">
+            <!-- License details will be displayed here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Law & Order Automation System</p>
+    </footer>
+</body>
+</html>

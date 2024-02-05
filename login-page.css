@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.login-card{
+    border: solid 5px rgb(255, 255, 255);
+    width: fit-content;
+    margin-left: 50vh;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30vh;
+    border-radius: 20px;
+}
+#Citizen{
+    font-size: x-large;
+    background-color: rgba(0, 255, 0, 0.764);
+}
+#Citizen:hover{
+    background-color: rgb(0, 255, 0);
+}
+#Staff{
+    font-size: x-large;
+    background-color: rgba(255, 0, 0, 0.777);
+}
+#Staff:hover{
+    background-color: red;
+}

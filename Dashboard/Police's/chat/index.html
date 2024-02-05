@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Police Chat</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="container" id="messageContainer">
+        <!-- Chat messages will be displayed here -->
+    </div>
+
+    <div class="input-container">
+        <input type="text" id="messageInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+    var messageInput = document.getElementById('messageInput');
+    var message = messageInput.value.trim(); // Get the message text and remove leading/trailing spaces
+
+    if (message !== '') {
+        displayMessage(message); // Display the message
+        messageInput.value = ''; // Clear the message input field
+    }
+}
+
+function displayMessage(message) {
+    var messageContainer = document.getElementById('messageContainer');
+    var messageElement = document.createElement('div');
+    messageElement.textContent = message;
+    messageElement.classList.add('message');
+    messageContainer.appendChild(messageElement);
+}
+
+function logout() {
+    // Add logout functionality here
+    console.log('Logout clicked');
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="dashboard.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Profile Settings</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main>
+        <div id="profilePictureContainer">
+            <img id="profilePicture" src="images.png" alt="Profile Picture">
+        </div>
+
+        <form id="profileSettingsForm" enctype="multipart/form-data">
+            <label for="newName">New Name:</label>
+            <input type="text" id="newName" name="newName" required><br><br>
+
+            <label for="newProfilePicture">New Profile Picture:</label>
+            <input type="file" id="newProfilePicture" name="newProfilePicture"><br><br>
+
+            <label for="newArea">Area:</label>
+            <select name="" id="">
+                <option value="0">Select Area</option>
+                <option value="1">North</option>
+                <option value="2">South</option>
+                <option value="3">East</option>
+                <option value="4">West</option>
+            </select>
+
+            <!-- Add more input fields for other details -->
+            
+            <button type="submit">Save Changes</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Law & Order Automation System</p>
+    </footer>
+</body>
+</html>

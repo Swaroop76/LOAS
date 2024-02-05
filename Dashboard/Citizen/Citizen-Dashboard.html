@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Dashboard - Law and Order</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, [Citizen Name]</h1>
+        <button>Logout</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#report-incident">Report Incident</a></li>
+            <li><a href='#' onclick="showCaseStatusForm()">Check Case Status</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Licenses</button>
+                    <div class="dropdown-content" id="licensesDropdown">
+                        <a href="#" onclick="showLicenseDetails('Arms')">Arms License</a>
+                        <a href="#" onclick="showLicenseDetails('Loudspeaker')">Loudspeaker License</a>
+                        <a href="#" onclick="showLicenseDetails('Hotel/Lodge')">Hotel/Lodge License</a>
+                        <a href="#" onclick="showLicenseDetails('Browsing_Centre')">Browsing Centre License</a>
+                        <a href="#" onclick="showLicenseDetails('Mass_Meetings')">Mass Meetings License</a>
+                        
+                        <!-- Add more license options here -->
+                    </div>
+                </div>
+            </li>
+            <li><a href="profile-settings.html">Profile Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="licenseDetails">
+            <!-- License details will be displayed here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Law & Order Automation System</p>
+    </footer>
+</body>
+</html>

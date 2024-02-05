@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>Welcome Admin</header>
+    <div id="nav-bar">
+        <button>Create/Edit a PS</button>
+        <button>Assign POs</button>
+        <button>Manage Departments</button>
+        <button>Manage Complaints</button>
+        <button>Verify Citizens</button>
+        <button>View Statistics</button>
+        <button>Manage Settings</button>
+    </div>
+    <div id="content-space">
+        <div id="PS">
+            <form id="psForm">
+                <label for="psName">Police Station Name:</label>
+                <input type="text" id="psName" name="psName" required>
+        
+                <label for="psLocation">Location:</label>
+                <input type="text" id="psLocation" name="psLocation" required>
+        
+                <label for="psZone">Zone:</label>
+                <select id="psZone" name="psZone" required>
+                    <option value="north">North</option>
+                    <option value="south">South</option>
+                    <option value="east">East</option>
+                    <option value="west">West</option>
+                </select>
+        
+                <label for="psDistrict">District:</label>
+                <input type="text" id="psDistrict" name="psDistrict" required>
+        
+                <label for="psAreas">Areas of Control:</label>
+                <textarea id="psAreas" name="psAreas" rows="4"></textarea>
+        
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+        <div id="AssignPOs">
+            <h2>Assign Police Officers to Police Stations</h2>
+
+            <label for="policeStation">Select Police Station:</label>
+            <select id="policeStation">
+                <option value="ps1">Police Station 1</option>
+                <option value="ps2">Police Station 2</option>
+                <option value="ps3">Police Station 3</option>
+            </select>
+
+            <label for="policeOfficer">Select Police Officer:</label>
+            <select id="policeOfficer">
+                <option value="po1">Police Officer 1</option>
+                <option value="po2">Police Officer 2</option>
+                <option value="po3">Police Officer 3</option>
+            </select>
+            <button onclick="assignPO()">Assign Police Officer</button>
+        </div>
+        <div id="managedeps">
+            <h2>Department Management</h2>
+
+            <label for="departmentName">Department Name:</label>
+            <input type="text" id="departmentName" placeholder="Enter department name" required>
+
+            <button onclick="addDepartment()">Add Department</button>
+
+            <h3>Department List</h3>
+            <ul id="departmentList" class="department-list">
+                <!-- Department list will be dynamically populated here -->
+            </ul>
+        </div>
+        <div id="managecomp">
+            <h2>Complaint Management</h2>
+
+            <label for="complaintTitle">Complaint Title:</label>
+            <input type="text" id="complaintTitle" placeholder="Enter complaint title" required>
+
+            <label for="complaintDescription">Complaint Description:</label>
+            <textarea id="complaintDescription" placeholder="Enter complaint description" required></textarea>
+
+            <button onclick="addComplaint()">Add Complaint</button>
+
+            <h3>Complaint List</h3>
+            <ul id="complaintList" class="complaint-list">
+                <!-- Complaint list will be dynamically populated here -->
+            </ul>
+        </div>
+        <div id="verifycitizen">
+            <h2>Citizen Verification</h2>
+
+            <label for="citizenID">Citizen ID:</label>
+            <input type="text" id="citizenID" placeholder="Enter citizen ID" required>
+
+            <label for="proofOfCitizenship">Proof of Citizenship:</label>
+            <select id="proofOfCitizenship">
+                <option value="aadhar">Aadhar Card</option>
+                <option value="passport">Passport</option>
+                <option value="voterID">Voter ID</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="verificationStatus">Verification Status:</label>
+            <select id="verificationStatus">
+                <option value="verified">Verified</option>
+                <option value="pending">Pending</option>
+                <option value="rejected">Rejected</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <button onclick="verifyCitizen()">Verify Citizen</button>
+        </div>
+        <div id="adminstatistics">
+            <h2>View Statistics</h2>
+
+            <button onclick="viewComplaintStatistics()">View Complaint Statistics</button>
+            <button onclick="viewCrimeRateStatistics()">View Crime Rate Statistics</button>
+            <button onclick="viewMostWanted()">View Most Wanted Criminals</button>
+        
+            <div id="statisticsContainer"></div>
+        </div>
+        <div id="manageSettings">
+            <h2>Manage Settings</h2>
+
+            <label for="systemName">System Name:</label>
+            <input type="text" id="systemName" placeholder="Enter system name">
+
+            <label for="notificationEmail">Notification Email:</label>
+            <input type="email" id="notificationEmail" placeholder="Enter notification email">
+
+            <button onclick="saveSettings()">Save Settings</button>
+        </div>
+    </div>
+</body>
+</html>

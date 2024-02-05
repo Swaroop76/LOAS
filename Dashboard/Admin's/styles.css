@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #001F3F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    padding: 5px;
+    font-size: xx-large;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+#nav-bar{
+    background-color: #F5F5F5;
+    justify-content: space-between;
+    border: solid 1px black;
+    display: flex;
+}
+#nav-bar button{
+    padding: 10px;
+    margin-right: 0;
+    width: 100%;
+    border: none;
+}
+#nav-bar button:hover{
+    border: solid 1px black;
+}
+#content-space{
+    margin: 50px;
+    background-color: rgba(255, 255, 255, 0.537);
+    height: fit-content;
+}
+#PS{
+    background-color: white;
+    display: none;
+    height: fit-content;
+}
+#psForm{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#psForm input,select,textarea{
+    margin-bottom: 10px;
+}
+#AssignPOs{
+    display: none;
+}
+#AssignPOs select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#AssignPOs button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#AssignPOs button:hover {
+    background-color: #45a049;
+}
+
+#managedeps{
+    display: none;
+}
+#managedeps select, input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#managedeps button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#managedeps button:hover {
+    background-color: #45a049;
+}
+
+#managedeps ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#managedeps li {
+    margin-bottom: 8px;
+}
+
+#managedeps .department-list {
+    max-width: 300px;
+}
+#managecomp{
+    display: none;
+}
+#managedeps select, input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+#verifycitizen{
+    display: none;
+}
+#verifycitizen select, input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#verifycitizen button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#verifycitizen button:hover {
+    background-color: #45a049;
+}
+#adminstatistics button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#adminstatistics button:hover {
+    background-color: #45a049;
+}
+
+#adminstatistics ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#adminstatistics li {
+    margin-bottom: 8px;
+}
+#adminstatistics{
+    display: none;
+}
+#manageSettings label, input {
+    margin-bottom: 16px;
+    display: block;
+}
+
+#manageSettings button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#manageSettings button:hover {
+    background-color: #45a049;
+}
